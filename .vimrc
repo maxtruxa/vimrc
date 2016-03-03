@@ -112,3 +112,6 @@ xnoremap <expr> p 'pgv"'.v:register.'y'
 " re-enabled by performing another search or using 'n' or something similar.
 nnoremap <silent> \ :noh<CR>
 
+" Enable mouse support in xterm.
+set mouse=a
+
