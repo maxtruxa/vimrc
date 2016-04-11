@@ -50,7 +50,7 @@ set autoindent
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
 " coming from other editors would expect.
-"set nostartofline
+set nostartofline
 
 " Display the cursor position on the last line of the screen or in the status
 " line of a window.
@@ -61,7 +61,7 @@ set laststatus=2
 
 " Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
-"set confirm
+set confirm
 
 " Use visual bell instead of beeping when doing something wrong.
 set visualbell
@@ -72,7 +72,7 @@ set visualbell
 set t_vb=
 
 " Enable use of the mouse for all modes.
-"set mouse=a
+set mouse=a
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue".
@@ -85,12 +85,12 @@ set number
 set notimeout ttimeout ttimeoutlen=200
 
 " Use <F11> to toggle between 'paste' and 'nopaste'.
-"set pastetoggle=<F11>
+set pastetoggle=<F11>
 
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
 " See: http://stackoverflow.com/questions/426963/replace-tab-with-spaces-in-vim
-set shiftwidth=4 softtabstop=4 expandtab
+set shiftwidth=2 softtabstop=2 expandtab
 
 " Enable code completion.
 set omnifunc=syntaxcomplete#Complete
@@ -108,10 +108,15 @@ highlight Comment cterm=NONE
 " See: http://stackoverflow.com/questions/290465/vim-how-to-paste-over-without-overwriting-register
 xnoremap <expr> p 'pgv"'.v:register.'y'
 
-" Temporarily disable search highlighting (see 'set hlsearch') by pressing backslash. Highlighting is
-" re-enabled by performing another search or using 'n' or something similar.
+" Temporarily disable search highlighting (see 'set hlsearch') by pressing
+" backslash. Highlighting is re-enabled by performing another search or using
+" 'n' or something similar.
 nnoremap <silent> \ :noh<CR>
 
-" Enable mouse support in xterm.
-set mouse=a
+" Map indent/unindent to tab/shift+tab.
+vmap <TAB> >gv
+vmap <S-TAB> <gv
+
+" Display a ruler by coloring column 81 red.
+set colorcolumn=81
 
