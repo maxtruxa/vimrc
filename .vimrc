@@ -92,6 +92,12 @@ set pastetoggle=<F11>
 " See: http://stackoverflow.com/questions/426963/replace-tab-with-spaces-in-vim
 set shiftwidth=2 softtabstop=2 expandtab
 
+" '100: Remember marks for the last 100 edited files.
+" <1000: Limit the number of lines saved for each register to 1000 lines.
+" s100: Skip registers with more than 100KB of text.
+" h: Disable search highlighting when Vim starts.
+set viminfo='100,<1000,s100,h
+
 " Enable code completion.
 set omnifunc=syntaxcomplete#Complete
 
