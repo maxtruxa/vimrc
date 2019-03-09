@@ -126,3 +126,6 @@ vmap <S-TAB> <gv
 " Display a ruler by coloring column 81 red.
 set colorcolumn=81
 
+" Syntax highlight Handlebars file as HTML.
+au BufRead,BufNewFile *.handlebars setfiletype html
+au BufRead,BufNewFile *.hbs setfiletype html
