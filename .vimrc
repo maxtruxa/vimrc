@@ -129,3 +129,12 @@ set colorcolumn=81
 " Syntax highlight Handlebars file as HTML.
 au BufRead,BufNewFile *.handlebars setfiletype html
 au BufRead,BufNewFile *.hbs setfiletype html
+
+" Identation overrides for specific languages.
+" While it is nice to split language specific configuration into separate
+" files inside the "ftplugin" directory, the additional work required to
+" maintain those files is just not worth it when each language has only a
+" small amount of custom settings.
+au filetype cpp setlocal shiftwidth=4 softtabstop=4 expandtab
+au filetype lua setlocal shiftwidth=4 softtabstop=4 expandtab
+au filetype python setlocal shiftwidth=4 softtabstop=4 expandtab
