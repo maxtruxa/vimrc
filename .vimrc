@@ -1,4 +1,13 @@
 
+" Explicitly source defaults.vim to override its settings
+" and prevent it from being loaded again later on if the
+" user does not have a ".vimrc".
+" See https://bugs.debian.org/864074
+if filereadable(expand("$VIMRUNTIME/defaults.vim"))
+  source $VIMRUNTIME/defaults.vim
+  let g:skip_defaults_vim = 1
+endif
+
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
